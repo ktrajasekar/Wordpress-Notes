@@ -8,7 +8,7 @@ foreach ( $fields as $field ) {
 echo '<div class="item">';
 $imageinput = $field['image_upload'];
 echo '<div align="center">';
-               echo '<img src="'.$imageinput.'" alt="Cover">';
+               echo '<img src="'.$imageinput.'" alt="Cover" class="img-responsive">';
                echo '</div></div>';
 }
 ?>
