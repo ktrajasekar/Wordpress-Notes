@@ -179,5 +179,40 @@ foreach ( $fields as $field ) {
 </section>
 ```
 
+--------------------------------
+Career Pop Up
+--------------------------------
 
+```
+[{"post_title":"careers-technology","post_name":"careers-technology","cfs_fields":[{"id":"8","name":"careers_tech","label":"careers-tech","type":"loop","notes":"","parent_id":0,"weight":0,"options":{"row_display":"0","row_label":"Add New","button_label":"Add Row","limit_min":"","limit_max":""}},{"id":"9","name":"careers_tech_title","label":"careers-tech-title","type":"text","notes":"","parent_id":8,"weight":1,"options":{"default_value":"","required":"0"}},{"id":"10","name":"careers_tech_desc","label":"careers-tech-desc","type":"wysiwyg","notes":"","parent_id":8,"weight":2,"options":{"formatting":"none","required":"0"}}],"cfs_rules":{"page_templates":{"operator":"==","values":["careers.php"]}},"cfs_extras":{"order":"0","context":"normal","hide_editor":"0"}}]
 
+```
+
+```
+  <!--Tech  -->
+  <div>
+                        <?php
+                        $loop = CFS()->get( 'careers_tech' );
+                        echo '<ul class="career-list">' ;
+                        foreach ( $loop as $row ) {
+                            $careertitle =$row['careers_tech_title'] ;
+                            $careerdesc =$row['careers_tech_desc'] ; ?>
+                           <li data-toggle="modal" data-target="#<?php echo preg_replace('/\s+/', '', $careertitle); ?>"> 
+                         <?php echo "<div class='career-list'>$careertitle</div>" ; ?>
+                            <div id="<?php echo preg_replace('/\s+/', '', $careertitle); ?>" class="modal" role="dialog">
+                            <div class="modal-dialog modal-lg careerModel">
+                            <div class="modal-content">
+                            <a href="javascript:void(0);" class="close careerClose" data-dismiss="modal"> <span class="glyphicon glyphicon-remove"></span></a>
+                                  <div class="modal-body careerContents">
+                            <?php echo $careerdesc ; ?>
+                        </div>
+                        </div></div>
+                        </div>
+                        <?php  echo '</li>';              
+           } ?>
+    <?php echo '</ul>'?>
+
+    ```
+ --------------------------------
+Career Pop Up end
+---------------------------------
