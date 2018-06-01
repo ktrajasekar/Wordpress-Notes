@@ -216,3 +216,22 @@ Career Pop Up
  --------------------------------
 Career Pop Up end
 ---------------------------------
+
+
+------------------
+Max Mega Menu
+----------------------
+
+#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-flyout ul.mega-sub-menu {
+  width: 300px !important;
+}
+
+### Check Page 
+
+```
+
+      <?php if(!is_page( array( 'about-us', 'contact', 'management' )) ) :?>
+     <?php endif; ?>
+
+```
+
