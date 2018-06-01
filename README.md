@@ -96,11 +96,10 @@ Home URL
 
 ```
 
-## Contact Form 
+### Contact Form 
 
 ```
     <?php echo do_shortcode('[contact-form-7 id="8" title="Contact form 1"]'); ?>
-
 .contactus input[type="text"], .contactus input[type="email"], .contactus textarea {
   border: #ccc 1px solid;
   border-radius: 0;
