@@ -236,3 +236,103 @@ Max Mega Menu
 
 ```
 
+### Check title and expert
+
+```
+          if ( get_the_title() != '' ) {
+            echo '<h2 class="entry-title">' . get_the_title() . '</h2>';
+          }
+          if ( get_the_excerpt() != '' ) {
+            echo '<div class="excerpt">' . get_the_excerpt() . '</div>';
+          }
+```
+
+
+### Animation Test
+
+```
+
+---------
+<div class="container-fluid animationcss np">
+<div class="container" style="min-height: 450px; margin-top: 40px;">
+  <div class="row">
+    <div class="col-sm-12 ">
+<div class="ani"> 
+  <span>Contact Coming Soon</span>
+</div>
+
+    </div>
+  </div>
+</div>
+</div>
+-------------------
+
+
+.animationcss {
+  text-align:center;
+  background:linear-gradient(120deg, #eee 25%, #eee 40%, #ddd 55%);
+  color:#555;
+  font-family:'Roboto';
+  font-weight:300;
+  font-size:32px;
+  padding-top:30vh;
+  height:80vh;
+  overflow:hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0,0,0);
+}
+
+div.ani {
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+div.ani:first-of-type {    /* For increasing performance 
+                       ID/Class should've been used. 
+                       For a small demo 
+                       it's okaish for now */
+  animation: showup 7s infinite;
+}
+
+div.ani:last-of-type {
+  width:0px;
+  animation: reveal 7s infinite;
+}
+
+div.ani:last-of-type span {
+  margin-left:-355px;
+  animation: slidein 7s infinite;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:355px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:355px;}
+}
+
+
+p {
+  font-size:12px;
+  color:#999;
+  margin-top:200px;
+}
+
+```
