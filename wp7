@@ -12,19 +12,20 @@
     color: #000;
     width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
 }
 .wpcf7 select{
     width: 100%;
     padding: 10px;
 }
+.mb20{
+    margin-bottom: 20px;
+}
 
 <div class="row">
-<div class="col-md-6"><label> Your Name (required)</label> [text* your-name]</div>
-<div class="col-md-6"><label>Your Email (required)</label> [email* your-email]</div>
-<div class="col-md-6"><label>Phone (required)</label>[text* text-346]</div>
-<div class="col-md-6"><label>Select :</label> [select* menu-519 "Sales" "Support" "Enquiry" "Call Back"]</div>
-<div class="col-md-12"><label>Your Message </label>[textarea your-message]</div>
+<div class="col-md-6 mb20"><label>Name (required)</label> [text* your-name]</div>
+<div class="col-md-6 mb20"><label>Email (required)</label> [text* text-485]</div>
+<div class="col-md-6 mb20"><label>Phone (required)</label>[text* text-346]</div>
+<div class="col-md-6 mb20"><label>Select :</label> [select* menu-519 "Sales" "Support" "Enquiry" "Call Back"]</div>
+<div class="col-md-12 mb20"><label>Your Message </label>[textarea your-message]</div>
 <div class="col-md-12">[submit "Send"]</div>
 </div>
-
