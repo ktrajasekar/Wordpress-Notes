@@ -336,3 +336,7 @@ p {
 }
 
 ```
+
+```
+					<?php echo get_post_meta($post->ID, 'EventDate', true); ?>
+```
