@@ -1,0 +1,26 @@
+/*404 page*/
+.page404{
+  min-height: 350px;
+}
+.page404 h1{
+  font-weight: 900;
+  font-size: 4rem;
+  margin-top: 20vh;
+  margin-bottom: 0;
+}
+.page40 p{
+  margin:0;
+  font-size: 1.3rem;
+}
+.gohome{
+  display: inline-block;
+  background: #000;
+  padding: 8px 30px;
+  color: #fff;
+  border:2px solid #000;
+}
+.gohome:hover{
+  border:2px solid #000;
+  color: #000;
+  background: #fff;
+}
